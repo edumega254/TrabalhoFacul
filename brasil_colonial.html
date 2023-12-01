@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HISTÓRIANET</title>
+  <link href="style_brasil_colonial.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>
+    <a href="index.html">
+      <img src="file:///C:/Users/Edu/OneDrive/Documentos/vscodeterab/logo_site_ajustado.png" alt="Logo Site">
+    </a>
+  </h1>
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="index.html">Início</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_brasil.html">História do Brasil</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_pre_colonial.html">Brasil Pré-Colonial</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">Brasil Colonial </a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_monarquico.html">Brasil Monarquico</a>
+    </div>
+    
+    <div class="menu-item">
+        <a href="brasil_republica.html">Brasil República</a>
+      </div>
+  </div>
+
+  <div class="subtitle">
+    <h2>Brasil Colônia</h2>
+  </div>
+
+  <div class="explanation">
+    <ul> 
+      <li>Ciclo do Pau-brasil (1500-1550):<br> No início, a colonização portuguesa focou-se na extração do pau-brasil. No entanto, esse ciclo foi de curta duração devido à exploração excessiva e à redução das árvores.</li><br>
+      <li>Ciclo da Cana-de-açúcar (séculos XVI e XVII): A produção de açúcar se tornou a principal atividade econômica, resultando no estabelecimento de grandes plantações e no uso intensivo de mão de obra escrava africana. As capitanias hereditárias, inicialmente uma forma de dividir e administrar a colônia, foram substituídas pelos governos-gerais.</li><br>
+      <li>Invasões estrangeiras: Durante o período colonial, o Brasil foi alvo de várias invasões estrangeiras, como a invasão francesa no Rio de Janeiro e a invasão holandesa em Pernambuco. Esses conflitos influenciaram a maneira como as fronteiras e os territórios eram defendidos.</li><br>
+      <li>Mineração (século XVIII): A descoberta de ouro e diamantes na região de Minas Gerais levou a uma corrida do ouro e à expansão do território colonial. O ciclo da mineração trouxe uma nova dinâmica econômica para a colônia.</li><br>
+      <li>Sociedade colonial: A sociedade colonial era estratificada, com uma elite formada por grandes proprietários de terras, senhores de engenho e mineradores. Abaixo dessa elite estavam os trabalhadores livres, e na base da pirâmide social encontravam-se os escravizados africanos, que desempenharam um papel fundamental na economia colonial.</li><br>
+      <li>Inconfidência Mineira (1789): Um dos eventos mais notáveis do final do período colonial foi a Inconfidência Mineira, um movimento de caráter separatista e republicano em Minas Gerais. O movimento não teve sucesso, mas é considerado um precursor do processo de independência.</li><br>
+      
+    </ul>
+  
+  
+  </div>
+  
+  
+  
+  <div id="comentarios-container">
+    <h3>Comentários</h3>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <br>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+      <br>
+      <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    <div id="comentarios">
+      <!-- Comentários serão adicionados aqui dinamicamente -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function adicionarComentario() {
+      // Obter valores do formulário
+      var nome = document.getElementById('nome').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Criar novo elemento de comentário
+      var novoComentario = document.createElement('div');
+      novoComentario.innerHTML = '<strong>' + nome + ':</strong> ' + comentario;
+
+      // Adicionar o novo comentário à lista de comentários
+      document.getElementById('comentarios').appendChild(novoComentario);
+
+      // Limpar o formulário
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>

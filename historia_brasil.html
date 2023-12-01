@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HISTÓRIANET</title>
+  <link href="style_historiadobrasil.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>
+    <a href="index.html">
+      <img src="file:///C:/Users/Edu/OneDrive/Documentos/vscodeterab/logo_site_ajustado.png" alt="Logo Site">
+    </a>
+  </h1>
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="index.html">Início</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">História do Brasil</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_pre_colonial.html">Brasil Pré-Colonial</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_colonial.html">Brasil Colonial </a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_monarquico.html">Brasil Monarquico</a>
+    </div>
+    
+    <div class="menu-item">
+        <a href="brasil_republica.html">Brasil República</a>
+      </div>
+  </div>
+
+  <div class="subtitle">
+    <h2>Descubra o mundo</h2>
+  </div>
+
+  <div class="explanation">
+    <p>O Brasil, uma nação vasta e diversa, tem uma história que remonta a milênios, com raízes profundas nas culturas indígenas que habitavam suas terras antes da chegada dos europeus. Em 1500, o navegador português Pedro Álvares Cabral desembarcou no litoral brasileiro, marcando o início de uma jornada complexa e multifacetada.
+
+      A colonização portuguesa trouxe consigo o ciclo do pau-brasil, seguido pelo próspero ciclo do açúcar, que moldou as dinâmicas sociais e econômicas no nordeste do país. O ciclo do ouro, descoberto nas Minas Gerais, desencadeou uma corrida frenética por riquezas e contribuiu para a formação da identidade brasileira.
+      
+      No início do século XIX, a independência foi proclamada por Dom Pedro I, estabelecendo o Império do Brasil. Ao longo do século, o país passou por transformações, desde a abolição da escravidão até a proclamação da República em 1889.
+      
+      O século XX testemunhou mudanças significativas, incluindo a Era Vargas, a Ditadura Militar e a redemocratização nos anos 1980. O Brasil enfrentou desafios diversos, desde questões socioeconômicas até debates sobre sua identidade cultural.
+      
+      Hoje, o Brasil é uma nação vibrante, influente globalmente, com uma história marcada pela diversidade étnica, cultural e geográfica. Com suas raízes profundas e uma trajetória única, a história do Brasil reflete a complexidade e a riqueza de uma nação que continua a evoluir e se transformar ao longo do tempo.</p>
+  </div>
+
+  <div id="comentarios-container">
+    <h3>Comentários</h3>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <br>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+      <br>
+      <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    <div id="comentarios">
+      <!-- Comentários serão adicionados aqui dinamicamente -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function adicionarComentario() {
+      // Obter valores do formulário
+      var nome = document.getElementById('nome').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Criar novo elemento de comentário
+      var novoComentario = document.createElement('div');
+      novoComentario.innerHTML = '<strong>' + nome + ':</strong> ' + comentario;
+
+      // Adicionar o novo comentário à lista de comentários
+      document.getElementById('comentarios').appendChild(novoComentario);
+
+      // Limpar o formulário
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>

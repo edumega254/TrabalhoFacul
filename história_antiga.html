@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HISTÓRIANET</title>
+  <link href="style_história_antiga.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>
+    <a href="index.html">
+      <img src="file:///C:/Users/Edu/OneDrive/Documentos/vscodeterab/logo_site_ajustado.png" alt="Logo Site">
+    </a>
+  </h1>
+
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="index.html">Início</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_brasil.html">História do Brasil</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">História Antiga</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_moderna.html">História Moderna</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_contemporanea.html">História contemporânea</a>
+    </div>
+  </div>
+
+  <div class="subtitle">
+    <h2>História Antiga</h2>
+  </div>
+
+  <div class="explanation">
+    <ul>
+      
+
+<li> (2,5 milhões a.C. - 10.000 a.C.): Surgimento do Homo sapiens, uso de ferramentas de pedra, caça e coleta.<br>
+Neolítico (10.000 a.C. - 2.000 a.C.): Início da agricultura, domesticação de animais, estabelecimento de comunidades sedentárias.</li><br> 
+
+
+<li>Mesopotâmia (3500 a.C. - 539 a.C.):
+Civilizações Sumérias, Acadianas e Babilônicas: Desenvolvimento da escrita cuneiforme, código de Hamurabi, Zigurate de Ur.<br>
+Assírios e Caldeus: Impérios poderosos, Jardins Suspensos da Babilônia.</li><br>
+
+
+<li>Egito Antigo (3100 a.C. - 30 a.C.):
+Civilização do Nilo: Construção das pirâmides, sistema de escrita hieroglífica, faraós.
+Império Novo: Reinados notáveis como os de Ramsés II e Tutancâmon.</li><br>
+
+<li>Grécia Antiga (800 a.C. - 146 a.C.):
+Período Arcaico: Desenvolvimento das cidades-Estado (polis), início dos Jogos Olímpicos.<br>
+Período Clássico: Atenas e Esparta, guerras médicas, Era de Ouro de Atenas, filósofos como Sócrates, Platão e Aristóteles.</li><br>
+
+<li>Roma Antiga (753 a.C. - 476 d.C.):
+República Romana: Expansão territorial, guerras púnicas, Júlio César.<br>
+Império Romano: Pax Romana, construção de estradas e aquedutos, queda do Império Romano do Ocidente.</li><br>  
+
+<li>China Antiga (c. 2070 a.C. - 220 d.C.):
+Dinastia Shang e Zhou: Desenvolvimento da escrita chinesa, Mandato do Céu.<br>
+Dinastia Qin e Han: Construção da Grande Muralha, unificação da China, Dinastia Han dourada.</li><br>
+
+<li>Índia Antiga (c. 3300 a.C. - 320 d.C.):
+Civilização do Vale do Indo: Cidades planejadas, sistema de escrita.<br>
+Império Maurya e Gupta: Grandes avanços em matemática (zero), arte e literatura.</li><br>
+
+<li>Civilizações Mesoamericanas:
+Olmecas, Maias e Astecas: Pirâmides, calendários precisos, sistemas de escrita (no caso dos maias).</li><br>
+
+<li>Civilização Persa (c. 550 a.C. - 330 a.C.):Império Aquemênida: Ciro, Dario, Xerxes, tolerância religiosa.</li><br>
+
+<li>Declínio das Antigas Civilizações:
+Migrações Bárbaras: Invasões que contribuíram para o declínio do Império Romano.<br>
+Colapso de Impérios na Ásia Central: Influência nas rotas da seda.</li><br>
+    </ul>
+  </div>
+  <div id="comentarios-container">
+    <h3>Comentários</h3>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <br>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+      <br>
+      <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    <div id="comentarios">
+      <!-- Comentários serão adicionados aqui dinamicamente -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function adicionarComentario() {
+      // Obter valores do formulário
+      var nome = document.getElementById('nome').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Criar novo elemento de comentário
+      var novoComentario = document.createElement('div');
+      novoComentario.innerHTML = '<strong>' + nome + ':</strong> ' + comentario;
+
+      // Adicionar o novo comentário à lista de comentários
+      document.getElementById('comentarios').appendChild(novoComentario);
+
+      // Limpar o formulário
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HISTÓRIANET</title>
+  <link href="style_brasil_monarquico.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>
+    <a href="index.html">
+      <img src="file:///C:/Users/Edu/OneDrive/Documentos/vscodeterab/logo_site_ajustado.png" alt="Logo Site">
+    </a>
+  </h1>
+
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="index.html">Início</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_brasil.html">História do Brasil</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_pre_colonial.html">Brasil Pré-Colonial</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_colonial.html">Brasil Colonial </a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">Brasil Monarquico</a>
+    </div>
+    
+    <div class="menu-item">
+        <a href="brasil_republica.html">Brasil República</a>
+      </div>
+  </div>
+
+  <div class="subtitle">
+    <h2>Brasil Monárquico</h2>
+  </div>
+
+  <div class="explanation">
+  
+    <ul> 
+    <li>Independência do Brasil (1822): A independência do Brasil foi proclamada por Dom Pedro I em 7 de setembro de 1822, rompendo os laços coloniais com Portugal. Essa separação foi, em grande parte, resultado de pressões internas e externas, incluindo a insatisfação com as políticas portuguesas e a instabilidade na Europa.</li><br>
+
+    <li>Dom Pedro I (1822-1831): Após a independência, Dom Pedro I tornou-se o primeiro imperador do Brasil. Seu governo foi marcado por conflitos internos, incluindo a Guerra da Cisplatina (1825-1828) e a abdicação em 1831, quando deixou o trono para seu filho, Dom Pedro II.</li><br>
+
+      <li>Regência (1831-1840): Durante a menoridade de Dom Pedro II, o Brasil foi governado por regentes. Esse período foi caracterizado por instabilidade política, rebeliões e conflitos regionais. A Regência Trina Permanente, a Regência Una e a Regência Trina Provisória foram fases desse período.</li><br>
+
+      <li>Dom Pedro II (1840-1889): Dom Pedro II ascendeu ao trono aos 14 anos. Seu reinado foi marcado por estabilidade política e econômica, bem como por avanços culturais e científicos. Entretanto, também enfrentou desafios, como a Guerra do Paraguai (1864-1870) e movimentos abolicionistas e republicanos.</li><br>
+
+      <li>Abolição da Escravidão (1888): Um dos eventos mais marcantes do final do período monárquico foi a assinatura da Lei Áurea em 1888, que aboliu a escravidão no Brasil. A princesa Isabel, filha de Dom Pedro II, assinou a lei.
+</li><br>
+
+      <li>Proclamação da República (1889): O descontentamento com a monarquia, juntamente com pressões republicanas, levou à Proclamação da República em 15 de novembro de 1889. O Marechal Deodoro da Fonseca liderou o movimento que resultou na deposição de Dom Pedro II.</li><br>
+  
+</ul>
+  
+</div>
+  <div id="comentarios-container">
+    <h3>Comentários</h3>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <br>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+      <br>
+      <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    <div id="comentarios">
+      <!-- Comentários serão adicionados aqui dinamicamente -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function adicionarComentario() {
+      // Obter valores do formulário
+      var nome = document.getElementById('nome').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Criar novo elemento de comentário
+      var novoComentario = document.createElement('div');
+      novoComentario.innerHTML = '<strong>' + nome + ':</strong> ' + comentario;
+
+      // Adicionar o novo comentário à lista de comentários
+      document.getElementById('comentarios').appendChild(novoComentario);
+
+      // Limpar o formulário
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>

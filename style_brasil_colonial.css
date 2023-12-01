@@ -1,0 +1,93 @@
+h1 {
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  font-size: 100px;
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir o elemento */
+  color: rgb(0, 0, 0); /* Adiciona uma cor de texto para melhor legibilidade */
+  padding: 20px; /* Adiciona algum preenchimento para espaçamento interno */
+}
+  p {
+    font-size: 20px;
+  }
+html {
+  background-color: rgb(255, 255, 255);
+  
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid black; /* Adiciona uma borda superior aos itens do menu */
+  border-bottom: 2px solid black; /* Adiciona uma borda inferior aos itens do menu */
+}
+
+.menu-item {
+  font-size: 30px;
+  margin: 30px;
+ 
+}
+.menu-item a {
+  text-decoration: none;
+  color: rgb(121, 0, 0);
+}
+
+.menu-item:hover {
+  background-color: #e0d77f; /* Cor diferente ao passar o mouse */
+}
+
+.subtitle {
+  font-size: 40px;
+  margin: 90px;
+}
+
+.ul, li {
+  font-size: 30px;
+  margin: 90px;
+  text-align: justify;
+
+}
+
+#comentarios-container {
+  margin-top: 20px;
+}
+
+#formulario {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#comentarios {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+#comentarios div {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+#comentarios strong {
+  color: #007bff;
+}
+
+#comentario {
+  width: 100%;
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

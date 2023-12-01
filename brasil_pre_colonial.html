@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HISTÓRIANET</title>
+  <link href="style_brasil_pre_colonial.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>
+    <a href="index.html">
+      <img src="file:///C:/Users/Edu/OneDrive/Documentos/vscodeterab/logo_site_ajustado.png" alt="Logo Site">
+    </a>
+  </h1>
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="index.html">Início</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_brasil.html">História do Brasil</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">Brasil Pré-Colonial</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_colonial.html">Brasil Colonial </a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_monarquico.html">Brasil Monarquico</a>
+    </div>
+    
+    <div class="menu-item">
+        <a href="brasil_republica.html">Brasil República</a>
+      </div>
+  </div>
+
+  <div class="subtitle">
+    <h2>O período pré-colonial no Brasil refere-se ao tempo anterior à chegada dos colonizadores europeus, principalmente os portugueses, no início do século XVI. Durante esse período, várias sociedades indígenas já habitavam a região, desenvolvendo suas próprias culturas e modos de vida. Aqui estão alguns tópicos relevantes sobre o Brasil pré-colonial:</h2>
+  </div>
+
+  <div class="explanation">
+   
+   <ul>
+<li>Povos Indígenas:Diversidade étnica e linguística: O Brasil abrigava uma grande variedade de grupos indígenas, cada um com suas próprias línguas, tradições e estruturas sociais.
+ Modos de subsistência: As sociedades indígenas tinham diferentes formas de organização econômica, incluindo agricultura, caça, pesca e coleta.</li><br>
+
+<li>Ciclos de Desenvolvimento:
+Período Arcaico: Marcado pela presença de grupos nômades que subsistiam da caça, pesca e coleta.
+Período Formativo: Desenvolvimento da agricultura e sedentarização de alguns grupos.
+Período Pré-Colonial Tardio: Crescimento de sociedades complexas com estruturas políticas e sociais mais elaboradas.</li><br>
+
+<li>Cultura Material:<br> Cerâmica: Desenvolvimento de técnicas avançadas na produção de cerâmica para fins utilitários e rituais.<br>
+Utensílios e Ferramentas: Uso de ferramentas de pedra, osso e madeira para diversas finalidades.</li><br>
+
+
+<li>Religião e Cosmologia:<br> Crenças espirituais: Diversidade de sistemas de crenças, envolvendo culto aos ancestrais, deidades da natureza e rituais xamânicos.<br>
+Arte rupestre: Algumas comunidades deixaram registros artísticos em cavernas, revelando aspectos de suas crenças e práticas religiosas.</li><br>
+
+
+<li>Sistema Social:<br> Organização tribal: As sociedades indígenas muitas vezes eram organizadas em estruturas tribais, com chefes ou líderes espirituais.<br>
+Sistemas de parentesco: Uso de sistemas complexos de parentesco para determinar relações sociais e políticas.</li><br>
+
+
+<li>Contato com Outras Culturas:<br> Interação regional: Trocas culturais e comerciais entre diferentes grupos indígenas.<br>
+Conflitos e alianças: Ocorrência de conflitos e alianças entre sociedades indígenas antes da chegada dos europeus.</li><br>
+
+<li>Efeitos das Grandes Navegações:<br> Chegada dos europeus: Impacto da chegada de exploradores e navegadores europeus, especialmente dos portugueses, no início do século XVI.</li><br>
+ </ul>
+   
+    
+  </div>
+  <div id="comentarios-container">
+    <h3>Comentários</h3>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <br>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+      <br>
+      <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    <div id="comentarios">
+      <!-- Comentários serão adicionados aqui dinamicamente -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function adicionarComentario() {
+      // Obter valores do formulário
+      var nome = document.getElementById('nome').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Criar novo elemento de comentário
+      var novoComentario = document.createElement('div');
+      novoComentario.innerHTML = '<strong>' + nome + ':</strong> ' + comentario;
+
+      // Adicionar o novo comentário à lista de comentários
+      document.getElementById('comentarios').appendChild(novoComentario);
+
+      // Limpar o formulário
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>

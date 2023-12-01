@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HISTÓRIANET</title>
+  <link href="style_brasil_republica.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>
+    <a href="index.html">
+      <img src="file:///C:/Users/Edu/OneDrive/Documentos/vscodeterab/logo_site_ajustado.png" alt="Logo Site">
+    </a>
+  </h1>
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="index.html">Início</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="historia_brasil.html">História do Brasil</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="#">Brasil Pré-Colonial</a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_colonial.html">Brasil Colonial </a>
+    </div>
+
+    <div class="menu-item">
+      <a href="brasil_monarquico.html">Brasil Monarquico</a>
+    </div>
+    
+    <div class="menu-item">
+        <a href="#">Brasil República</a>
+      </div>
+  </div>
+
+  <div class="subtitle">
+    <h2>Brasil República</h2>
+  </div>
+
+  <div class="explanation">
+    <ul>
+     <li>Proclamação da República (1889): A Proclamação da República ocorreu em 15 de novembro de 1889, liderada pelo Marechal Deodoro da Fonseca, que proclamou a dissolução do regime monárquico e a instauração do governo republicano.</li><br> 
+
+     <li>República Velha (1889-1930): Também conhecida como a "República das Oligarquias", esse período foi marcado pelo predomínio político e econômico das oligarquias agrárias. A política do café com leite alternava a presidência entre São Paulo (representado pelo café) e Minas Gerais (representado pelo leite).</li><br> 
+
+     <li>Revolta da Armada (1893-1894): Um conflito militar significativo que ocorreu durante a República Velha, envolvendo a Marinha contra o governo central, liderado pelo presidente Floriano Peixoto.</li><br> 
+
+     <li>Movimento Tenentista (décadas de 1920 e 1930): Um movimento militar que buscava reformas políticas, sociais e econômicas. Os "tenentes" eram oficiais militares que criticavam a corrupção e as práticas políticas da República Velha.
+</li><br> 
+<li>Era Vargas (1930-1945): Getúlio Vargas assumiu o poder após a Revolução de 1930, encerrando a República Velha. Durante seu governo, Vargas implementou diversas reformas, incluindo a Consolidação das Leis do Trabalho (CLT) e o estabelecimento do Estado Novo em 1937, um período autoritário que durou até 1945.</li><br> 
+
+<li>Era Populista (1945-1964): Após a queda de Vargas, o Brasil experimentou um período de governos democráticos e populistas. Destacam-se os presidentes Eurico Gaspar Dutra, Getúlio Vargas (novamente) e Juscelino Kubitschek, responsável pela construção de Brasília</li><br> .
+
+<li>Golpe Militar de 1964: Em 1964, um golpe militar derrubou o governo democraticamente eleito de João Goulart, instaurando uma ditadura militar que durou até 1985. Esse período foi marcado por repressão política, censura e violações dos direitos humanos.</li><br> 
+
+<li> Redemocratização (1985 em diante): Com o movimento das Diretas Já e a pressão por reformas políticas, o Brasil iniciou um processo de redemocratização. Em 1985, Tancredo Neves foi eleito presidente, mas faleceu antes de assumir, sendo sucedido por José Sarney. A Constituição de 1988 marcou o restabelecimento das instituições democráticas.</li><br> 
+
+<li>Governo atual: Desde a redemocratização, o Brasil experimentou vários ciclos políticos e econômicos. O país enfrentou desafios como a estabilidade econômica, a corrupção, questões sociais e ambientais. O cenário político permanece dinâmico, com diferentes partidos e ideologias influenciando a governança.</li><br>  
+    </ul>
+    
+  </div>
+  <div id="comentarios-container">
+    <h3>Comentários</h3>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+      <br>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+      <br>
+      <button type="button" onclick="adicionarComentario()">Adicionar Comentário</button>
+    </form>
+
+    <div id="comentarios">
+      <!-- Comentários serão adicionados aqui dinamicamente -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function adicionarComentario() {
+      // Obter valores do formulário
+      var nome = document.getElementById('nome').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Criar novo elemento de comentário
+      var novoComentario = document.createElement('div');
+      novoComentario.innerHTML = '<strong>' + nome + ':</strong> ' + comentario;
+
+      // Adicionar o novo comentário à lista de comentários
+      document.getElementById('comentarios').appendChild(novoComentario);
+
+      // Limpar o formulário
+      document.getElementById('formulario').reset();
+    }
+  </script>
+</body>
+
+</html>
